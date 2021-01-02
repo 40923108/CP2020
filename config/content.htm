@@ -15,7 +15,7 @@
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
 <h1>HW1</h1>
 <h2>PCH1</h2>
-<h3>External Components of the Desktop System Unit </h3>
+<h3>External Components of the Desktop System Unit</h3>
 <p id="N10687" lang="">The lab activity below is designed to help you locate and understand the purpose of the various bays and ports on a desktop PC system unit. To identify components, move your mouse pointer over the name of the component or the image. Then be sure to click on each component to see a detailed view. In the detailed view, you will be able to examine the cables of various peripherals. You also will be able to see the most common bays and the way peripherals fit into them.</p>
 <p id="N1068A" lang="">After you've had the opportunity to use the simulator carefully, answer the question below.</p>
 <p id="N10687" lang=""><span>下面的實驗活動旨在幫助您查找和了解台式PC系統單元上各種托架和端口的用途。要識別組件，請將鼠標指針移到組件或圖像的名稱上。然後，請確保單擊每個組件以查看詳細視圖。在詳細視圖中，您將能夠檢查各種外圍設備的電纜。您還將能夠看到最常見的托架以及外圍設備裝入它們的方式。</span></p>
@@ -509,7 +509,7 @@
 </div>
 <h1>HW2</h1>
 <h1>HW3</h1>
-<h2>List Overlap</h2>
+<h2>05 List Overlap</h2>
 <p><span>Exercise 5 (and Solution)</span></p>
 <p><span>練習 5 (和解決方案)</span></p>
 <p>Take two lists, say for example these two:</p>
@@ -579,7 +579,7 @@
     <span class="k">print</span><span class="p">(</span><span class="s">"This student is enrolled."</span><span class="p">)</span></code></pre>
 </figure>
 </div>
-<h2 class="imagewrap"><span>String Lists</span></h2>
+<h2>06 String Lists</h2>
 <div><i>strings lists index</i></div>
 <div>字符串列表索引</div>
 <div></div>
@@ -711,16 +711,185 @@
 <p>Moral of the story: a string is a list.</p>
 <p><span>現在，其中</span><code class="highlighter-rouge">s</code><span>包含字符串“ examp”。</span></p>
 <p><span><span>故事的寓意：字符串是一個列表。</span></span></p>
-<p><span></span></p>
-<div class="imagewrap"><span></span></div>
-</div>
-</div>
-</div>
+<h2>07 List Comprehensions</h2>
+<p>Exercise 7 (and solution)</p>
+<p>練習7(和解決方案)</p>
+<p>Let’s say I give you a list saved in a variable:<span> </span><code class="highlighter-rouge">a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code>. Write one line of Python that takes this list<span> </span><code class="highlighter-rouge">a</code><span> </span>and makes a new list that has only the even elements of this list in it.</p>
+<p><span>假設我給您一個保存在變量中的列表：</span><code class="highlighter-rouge">a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code><span><span>。</span><span>編寫一行Python來獲取此列表，</span></span><code class="highlighter-rouge">a</code><span><span>並創建一個僅包含該列表偶數元素的新列表。</span></span></p>
+<p>Discussion</p>
+<p>討論區</p>
+<p>Concepts for this week:</p>
+<ul>
+<li>List comprehensions</li>
+</ul>
+<p><span>本週的概念：</span></p>
+<ul>
+<li><span><span>清單理解</span></span></li>
+</ul>
+<p>List comprehensions</p>
+<p>清單理解</p>
+<p>The idea of a<span> </span><em>list comprehension</em><span> </span>is to make code more compact to accomplish tasks involving lists. Take for example this code:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">years_of_birth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1991</span><span class="p">]</span>
+  <span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_of_birth</span><span class="p">:</span> 
+    <span class="n">ages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2014</span> <span class="o">-</span> <span class="n">year</span><span class="p">)<br/></span></code></pre>
+</figure>
+<p><em><span>列表理解</span></em><span>的思想是使代碼更緊湊，以完成涉及列表的任務。以下面的代碼為例：</span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">years_of_birth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1991</span><span class="p">]</span>
+  <span class="n">ages</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_of_birth</span><span class="p">:</span> 
+    <span class="n">ages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2014</span> <span class="o">-</span> <span class="n">year</span><span class="p">)</span></code></pre>
+</figure>
+<p>And at the end, the variable<span> </span><code class="highlighter-rouge">ages</code><span> </span>has the list<span> </span><code class="highlighter-rouge">[24, 23, 24, 24, 22, 23]</code>. What this code did was translate the years of birth into ages, and it took us a for loop and an append statement to a new list to do that.</p>
+<p>Compare to this piece of code:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">years_of_birth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1991</span><span class="p">]</span>
+  <span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2014</span> <span class="o">-</span> <span class="n">year</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_of_birth</span><span class="p">]</span></code></pre>
+</figure>
+<p><span>最後，變量</span><code class="highlighter-rouge">ages</code><span>具有list<span> </span></span><code class="highlighter-rouge">[24, 23, 24, 24, 22, 23]</code><span>。這段代碼所做的就是將出生的歲月轉換成年齡，然後我們使用了for循環，並在新列表中添加了一個append語句來做到這一點。</span></p>
+<p><span><span>比較這段代碼：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">years_of_birth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">1991</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1990</span><span class="p">,</span> <span class="mi">1992</span><span class="p">,</span> <span class="mi">1991</span><span class="p">]</span>
+  <span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2014</span> <span class="o">-</span> <span class="n">year</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_of_birth</span><span class="p">]</span></code></pre>
+</figure>
+<p>The second line here - the line with<span> </span><code class="highlighter-rouge">ages</code><span> </span>is a<span> </span><em>list comprehension.</em></p>
+<p>這裡的第二行-與的行<code class="highlighter-rouge">ages</code>是列表理解。</p>
+<p>It accomplishes the same thing as the first code sample - at the end, the<span> </span><code class="highlighter-rouge">ages</code><span> </span>variable has a list containing<span> </span><code class="highlighter-rouge">[24, 23, 24, 24, 22, 23]</code>, the ages corresponding to all the birthdates.</p>
+<p><span>它完成了與第一個代碼示例相同的任務-最後，該</span><code class="highlighter-rouge">ages</code><span><span>變量具有一個列表，其中包含</span></span><code class="highlighter-rouge">[24, 23, 24, 24, 22, 23]</code><span><span>，其年齡對應於所有生日。</span></span></p>
+<p>The idea of the list comprehension is to condense the for loop and the list appending into one simple line. Notice that the for loop just shifted to the end of the list comprehension, and the part before the<span> </span><code class="highlighter-rouge">for</code><span> </span>keyword is the thing to append to the end of the new list.</p>
+<p><span>列表理解的思想是壓縮for循環，並將列表追加到一條簡單的行中。請注意，for循環剛剛移到列表理解的末尾，而</span><code class="highlighter-rouge">for</code><span><span>關鍵字</span><span>之前的部分</span><span>是要附加到新列表末尾的東西。</span></span></p>
+<p>You can also embed<span> </span><code class="highlighter-rouge">if</code><span> </span>statements into the list comprehension - check out this reference to help you out. There are many examples and a better explanation than I can ever give.</p>
+<p><span>您還可以將</span><code class="highlighter-rouge">if</code><span><span>語句</span><span>嵌入</span><span>到列表理解中-請查閱參考資料</span></span><span><span>以幫助您。</span><span>有許多例子和比我能提供的更好的解釋。</span></span></p><h2>08 Rock Paper Scissors</h2>
+<p>Exercise 8(and solution)</p>
+<p>練習 8 (和解決方案)</p>
+<p>Make a two-player Rock-Paper-Scissors game. (<em>Hint: Ask for player plays (using<span> </span><code class="highlighter-rouge">input</code>), compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game</em>)</p>
+<p><span>製作兩人石頭剪刀布遊戲。（</span><em><span>提示：（使用</span><code class="highlighter-rouge">input</code><span>）詢問玩家玩法，進行比較，打印出對獲勝者表示祝賀的消息，並詢問玩家是否要開始新遊戲</span></em><span>）</span></p>
+<p><span><span></span></span>Remember the rules:</p>
+<ul>
+<li>Rock beats scissors</li>
+<li>Scissors beats paper</li>
+<li>Paper beats rock</li>
+</ul>
+<p><span>記住規則：</span></p>
+<ul>
+<li><span><span>搖滾剪刀</span></span></li>
+<li><span><span>剪刀打紙</span></span></li>
+<li><span><span>紙打石頭</span></span></li>
+</ul>
+<p><span></span>Discussion</p>
+<p>討論區</p>
+<p>Concepts for this week:</p>
+<ul>
+<li>While loops</li>
+<li>Infinite loops</li>
+<li>Break statements</li>
+</ul>
+<div class="imagewrap"><span></span>While loops</div>
+<div class="imagewrap"></div>
+<div class="imagewrap">While 循環</div>
+<div class="imagewrap">
+<p>We have already discussed<span> </span><code class="highlighter-rouge">for</code><span> </span>loops, or loops that look sequentially (one by one) at elements in a list. There is a second type of loop that works in a slightly different way called a<span> </span><code class="highlighter-rouge">while</code><span> </span>loop.</p>
+<p><span>我們已經討論過</span><code class="highlighter-rouge">for</code><span>循環，或循環（逐一）查看列表中的元素的循環。還有第二種類型的循環，其工作方式略有不同，稱為</span><code class="highlighter-rouge">while</code><span>循環。</span></p>
+<p>The idea is simple: while a certain condition is<span> </span><code class="highlighter-rouge">True</code>, keep doing something. For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">-=</span> <span class="mi">1</span></code></pre>
+</figure>
+<p><span>這個想法很簡單：在一定條件下</span><code class="highlighter-rouge">True</code><span>，繼續做某事。例如：</span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">-=</span> <span class="mi">1</span></code></pre>
+</figure>
+<p>The output of this code segment is:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="mi">5</span>
+  <span class="mi">4</span>
+  <span class="mi">3</span>
+  <span class="mi">2</span>
+  <span class="mi">1</span></code></pre>
+</figure>
+<p><span>該代碼段的輸出為：</span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="mi">5</span>
+  <span class="mi">4</span>
+  <span class="mi">3</span>
+  <span class="mi">2</span>
+  <span class="mi">1</span></code></pre>
+</figure>
+<p>A particularly useful way to use<span> </span><code class="highlighter-rouge">while</code><span> </span>loops is checking user input for correctness. For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Type "enter" to quit:'</span> <span class="p">)</span>
+  <span class="k">while</span> <span class="n">quit</span> <span class="o">!=</span> <span class="s">"enter"</span><span class="p">:</span>
+    <span class="n">quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Type "enter" to quit:'</span> <span class="p">)</span></code></pre>
+</figure>
+<p><span>使用</span><code class="highlighter-rouge">while</code><span>循環的一種特別有用的方法是檢查用戶輸入的正確性。例如：</span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Type "enter" to quit:'</span> <span class="p">)</span>
+  <span class="k">while</span> <span class="n">quit</span> <span class="o">!=</span> <span class="s">"enter"</span><span class="p">:</span>
+    <span class="n">quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Type "enter" to quit:'</span> <span class="p">)</span></code></pre>
+</figure>
+<p>The uses for this are infinite, and can (and should!) be combined with conditionals to yield the most efficient results.</p>
+<p><span>此方法的用途是無限的，並且可以（並且應該！）與條件條件結合使用以產生最有效的結果</span></p>
+<p>Infinite loops</p>
+<p>無限循環</p>
+<p>An infinite loop is a loop that never stops. This means that the condition in the beginning of the while loop will always be true.</p>
+<p>For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Inside the loop"</span><span class="p">)</span></code></pre>
+</figure>
+<p><span>無限循環是永不停止的循環。這意味著while循環開始時的條件將始終為true。</span></p>
+<p><span><span>例如：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+  <span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Inside the loop"</span><span class="p">)</span></code></pre>
+</figure>
+<p>What will happen is the loop will print out the phrase “Inside the loop” forever and ever. If you are running your computer, you will have to “kill the program” to stop it. Each operating system has a different way of “killing a program” to get out of an infinite loop.</p>
+<p><span>將會發生的是，循環將永遠打印出短語“ Inside the loop”。</span><span>如果您正在運行計算機，則必須“殺死該程序”以將其停止。</span><span>每個操作系統都有不同的“殺死程序”以擺脫無限循環的方式。</span></p>
+<p>On Linux: in the terminal, type “CTRL-C” to kill the program that is currently running in the terminal. If you are using the IDLE Python IDE, then you must press “CTRL-D” to exit your running program. When in doubt, do a Google search before you start programming!</p>
+<p><span>在Linux上：在終端中，鍵入“ CTRL-C”以終止終端中當前正在運行的程序。</span><span>如果使用的是IDLE Python IDE，則必須按“ CTRL-D”退出正在運行的程序。</span><span>如有疑問，請在開始編程之前進行Google搜索！</span></p>
+<p>On Windows: type “CTRL-ALT-DEL” and open the task manager to kill the program.</p>
+<p><span>在Windows上：鍵入“ CTRL-ALT-DEL”並打開任務管理器以終止程序。</span></p>
+<p>On Mac: right-click on the task, and kill the program that is running forever.</p>
+<p><span>在Mac上：右鍵單擊該任務，然後終止永久運行的程序。</span></p>
+<p>If you find yourself in an infinite loop, your program will never end.</p>
+<p><span>如果發現自己陷入無限循環，則程序將永遠不會結束。</span></p>
+<p>Break statements</p>
+<p>中斷聲明</p>
+<p>A<span> </span><code class="highlighter-rouge">break</code><span> </span>statement stops the execution of a loop before the original condition is met. While the use of a<span> </span><code class="highlighter-rouge">break</code><span> </span>statement will often start an argument about good coding practices, sometimes it is useful.</p>
+<p>For example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">while</span> <span class="bp">True</span><span class="p">:</span> 
+    <span class="n">usr_command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your command: "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">usr_command</span> <span class="o">==</span> <span class="s">"quit"</span><span class="p">:</span>
+      <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span> 
+      <span class="k">print</span><span class="p">(</span><span class="s">"You typed "</span> <span class="o">+</span> <span class="n">usr_command</span><span class="p">)<br/></span></code></pre>
+</figure>
+<p><code class="highlighter-rouge">break</code><span>在滿足原始條件之前，一條語句將停止執行循環。儘管使用</span><code class="highlighter-rouge">break</code><span>語句通常會引發有關良好編碼實踐的爭論，但有時它很有用。</span></p>
+<p><span><span>例如：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">while</span> <span class="bp">True</span><span class="p">:</span> 
+    <span class="n">usr_command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter your command: "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">usr_command</span> <span class="o">==</span> <span class="s">"quit"</span><span class="p">:</span>
+      <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span> 
+      <span class="k">print</span><span class="p">(</span><span class="s">"You typed "</span> <span class="o">+</span> <span class="n">usr_command</span><span class="p">)</span></code></pre>
+</figure>
+<p>In this case, the<span> </span><code class="highlighter-rouge">break</code><span> </span>statement is used to break off the “infinite while loop” that we have constructed with the<span> </span><code class="highlighter-rouge">while True</code><span> </span>statement.</p>
+<p><span>在這種情況下，該</span><code class="highlighter-rouge">break</code><span><span>語句用於中斷我們使用該</span></span><code class="highlighter-rouge">while True</code><span><span>語句</span><span>構造的“無限while循環”<span> </span></span><span>。</span></span></p>
 </div>
 <div actguid="d87f2d110a0001dc54b26764f1b37aa9" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2d110a0001dc54b26764f1b37aa9&amp;userGUID=40923108%40gm.nfu.edu.tw&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
 <div class="activitywrap purpose learnbydoing flash" id="dpch01_lbd09">
 <div class="activityhead"></div>
 </div>
 </div>
-<div class="imagewrap"></div>
-</div>
+<div class="imagewrap"></div></div></div></div></div></div>
