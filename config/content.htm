@@ -508,7 +508,19 @@
 </div>
 </div>
 <h1>HW2</h1>
-<h1>HW3</h1>
+<p><a href="http://mde.tw/cp2020/content/HW2.html">http://mde.tw/cp2020/content/HW2.html</a><span> </span>所面臨的問題是各班採用亂數分組後, 部分學員無法利用學號登記 Github 帳號, 導致當時直接利用學號作為 Github 帳號所產生的<span> </span><a href="http://mde.tw/cp2020/content/W3.html">http://mde.tw/cp2020/content/W3.html</a><span> </span>部分內容錯誤, 在此希望採用程式流程來產生正確的 W3 分組連結內容. 但因為分組後部分學員加退選, 因此也希望透過程式方法找出各班加選或退選的學員名單, 並將尚未納組的組員加入特定組別. 另外, 當時甲班分組後並沒有像乙班將分組結合以數列儲存, 因此必須從 W3 的網站內容中設法擷取出甲班的分組數列, 以利後續進行比對或循環建立組員連結資料之用. 總結上述, HW2 計有三項主題:</p>
+<ol>
+<li>從 W3 網頁中擷取出甲班的分組數列</li>
+<li>比對先前分組資料與最終教務處選課名單,列出事後加選或退選人員名單</li>
+<li>根據組員的 Github 帳號列出正確的 W3 倉儲與網站連結</li>
+</ol>
+<p>亂數分組:</p>
+<p>semester=1091</p>
+<p>courseno=0762</p>
+<p>cp</p>
+<p>1a 1091/0762</p>
+<p>1b 1091/0776</p>
+<p></p><h1>HW3</h1>
 <h2>05 List Overlap</h2>
 <p><span>Exercise 5 (and Solution)</span></p>
 <p><span>練習 5 (和解決方案)</span></p>
@@ -711,7 +723,19 @@
 <p>Moral of the story: a string is a list.</p>
 <p><span>現在，其中</span><code class="highlighter-rouge">s</code><span>包含字符串“ examp”。</span></p>
 <p><span><span>故事的寓意：字符串是一個列表。</span></span></p>
-<h2>07 List Comprehensions</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def reverse(word):
+	x = ''
+	for i in range(len(word)):
+		x += word[len(word)-1-i]
+	return x
+
+word = input('give me a word:\n')
+x = reverse(word)
+if x == word:
+	print('This is a Palindrome')
+else:
+	print('This is NOT a Palindrome')</pre>
+<p></p><h2>07 List Comprehensions</h2>
 <p>Exercise 7 (and solution)</p>
 <p>練習7(和解決方案)</p>
 <p>Let’s say I give you a list saved in a variable:<span> </span><code class="highlighter-rouge">a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</code>. Write one line of Python that takes this list<span> </span><code class="highlighter-rouge">a</code><span> </span>and makes a new list that has only the even elements of this list in it.</p>
@@ -761,7 +785,22 @@
 <p>The idea of the list comprehension is to condense the for loop and the list appending into one simple line. Notice that the for loop just shifted to the end of the list comprehension, and the part before the<span> </span><code class="highlighter-rouge">for</code><span> </span>keyword is the thing to append to the end of the new list.</p>
 <p><span>列表理解的思想是壓縮for循環，並將列表追加到一條簡單的行中。請注意，for循環剛剛移到列表理解的末尾，而</span><code class="highlighter-rouge">for</code><span><span>關鍵字</span><span>之前的部分</span><span>是要附加到新列表末尾的東西。</span></span></p>
 <p>You can also embed<span> </span><code class="highlighter-rouge">if</code><span> </span>statements into the list comprehension - check out this reference to help you out. There are many examples and a better explanation than I can ever give.</p>
-<p><span>您還可以將</span><code class="highlighter-rouge">if</code><span><span>語句</span><span>嵌入</span><span>到列表理解中-請查閱參考資料</span></span><span><span>以幫助您。</span><span>有許多例子和比我能提供的更好的解釋。</span></span></p><h2>08 Rock Paper Scissors</h2>
+<p><span>您還可以將</span><code class="highlighter-rouge">if</code><span><span>語句</span><span>嵌入</span><span>到列表理解中-請查閱參考資料</span></span><span><span>以幫助您。</span><span>有許多例子和比我能提供的更好的解釋。</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+numlist = []
+list_length = random.randint(5,15)
+
+
+while len(numlist) &lt; list_length:
+    numlist.append(random.randint(1,75))
+    
+
+evenlist = [number for number in numlist if number % 2 == 0] 
+
+print(numlist)
+print(evenlist)</pre>
+<p></p><h2>08 Rock Paper Scissors</h2>
 <p>Exercise 8(and solution)</p>
 <p>練習 8 (和解決方案)</p>
 <p>Make a two-player Rock-Paper-Scissors game. (<em>Hint: Ask for player plays (using<span> </span><code class="highlighter-rouge">input</code>), compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game</em>)</p>
@@ -889,7 +928,38 @@
 </div>
 <div actguid="d87f2d110a0001dc54b26764f1b37aa9" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2d110a0001dc54b26764f1b37aa9&amp;userGUID=40923108%40gm.nfu.edu.tw&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
 <div class="activitywrap purpose learnbydoing flash" id="dpch01_lbd09">
-<div class="activityhead"></div>
+<div class="activityhead">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print('''Please pick one:
+            rock
+            scissors
+            paper''')
+
+while True:
+    game_dict = {'rock': 1, 'scissors': 2, 'paper': 3}
+    player_a = str(input("Player a: "))
+    player_b = str(input("Player b: "))
+    a = game_dict.get(player_a)
+    b = game_dict.get(player_b)
+    dif = a - b
+
+    if dif in [-1, 2]:
+        print('player a wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    elif dif in [-2, 1]:
+        print('player b wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    else:
+        print('Draw.Please continue.')
+        print('')</pre>
+</div>
 </div>
 </div>
 <div class="imagewrap"></div></div></div></div></div></div>

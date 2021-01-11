@@ -261,7 +261,38 @@ img.add_border {
 </div>
 <div actguid="d87f2d110a0001dc54b26764f1b37aa9" class="asx" inlineparams="inlineClient=%2Fsuperactivity%2Fassessment2%2FInlineAssessmentClient.swf&amp;activityMode=delivery&amp;activityContextGUID=d87f2d110a0001dc54b26764f1b37aa9&amp;userGUID=40923108%40gm.nfu.edu.tw&amp;activityService=%2Fjcourse%2Fa2%2Frest&amp;webContentPath=%2Frepository%2Fwebcontent%2Fd826575d0a0001dc3e9f244fa018c560%2F&amp;logService=%2Flog%2Fserver&amp;">
 <div class="activitywrap purpose learnbydoing flash" id="dpch01_lbd09">
-<div class="activityhead"></div>
+<div class="activityhead">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print('''Please pick one:
+            rock
+            scissors
+            paper''')
+
+while True:
+    game_dict = {'rock': 1, 'scissors': 2, 'paper': 3}
+    player_a = str(input("Player a: "))
+    player_b = str(input("Player b: "))
+    a = game_dict.get(player_a)
+    b = game_dict.get(player_b)
+    dif = a - b
+
+    if dif in [-1, 2]:
+        print('player a wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    elif dif in [-2, 1]:
+        print('player b wins.')
+        if str(input('Do you want to play another game, yes or no?\n')) == 'yes':
+            continue
+        else:
+            print('game over.')
+            break
+    else:
+        print('Draw.Please continue.')
+        print('')</pre>
+</div>
 </div>
 </div>
 <div class="imagewrap"></div></div></div></div></div></div><br />07 List Comprehensions << <a href='07 List Comprehensions.html'>Previous</a> </div>

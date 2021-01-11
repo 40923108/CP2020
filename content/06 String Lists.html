@@ -265,7 +265,19 @@ img.add_border {
 <p>Moral of the story: a string is a list.</p>
 <p><span>現在，其中</span><code class="highlighter-rouge">s</code><span>包含字符串“ examp”。</span></p>
 <p><span><span>故事的寓意：字符串是一個列表。</span></span></p>
-<br />05 List Overlap << <a href='05 List Overlap.html'>Previous</a> <a href='07 List Comprehensions.html'>Next</a> >> 07 List Comprehensions</div>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def reverse(word):
+	x = ''
+	for i in range(len(word)):
+		x += word[len(word)-1-i]
+	return x
+
+word = input('give me a word:\n')
+x = reverse(word)
+if x == word:
+	print('This is a Palindrome')
+else:
+	print('This is NOT a Palindrome')</pre>
+<p></p><br />05 List Overlap << <a href='05 List Overlap.html'>Previous</a> <a href='07 List Comprehensions.html'>Next</a> >> 07 List Comprehensions</div>
         
     <!-- footer -->
       <div class="container">

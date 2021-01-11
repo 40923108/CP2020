@@ -183,7 +183,22 @@ img.add_border {
 <p>The idea of the list comprehension is to condense the for loop and the list appending into one simple line. Notice that the for loop just shifted to the end of the list comprehension, and the part before the<span> </span><code class="highlighter-rouge">for</code><span> </span>keyword is the thing to append to the end of the new list.</p>
 <p><span>列表理解的思想是壓縮for循環，並將列表追加到一條簡單的行中。請注意，for循環剛剛移到列表理解的末尾，而</span><code class="highlighter-rouge">for</code><span><span>關鍵字</span><span>之前的部分</span><span>是要附加到新列表末尾的東西。</span></span></p>
 <p>You can also embed<span> </span><code class="highlighter-rouge">if</code><span> </span>statements into the list comprehension - check out this reference to help you out. There are many examples and a better explanation than I can ever give.</p>
-<p><span>您還可以將</span><code class="highlighter-rouge">if</code><span><span>語句</span><span>嵌入</span><span>到列表理解中-請查閱參考資料</span></span><span><span>以幫助您。</span><span>有許多例子和比我能提供的更好的解釋。</span></span></p><br />06 String Lists << <a href='06 String Lists.html'>Previous</a> <a href='08 Rock Paper Scissors.html'>Next</a> >> 08 Rock Paper Scissors</div>
+<p><span>您還可以將</span><code class="highlighter-rouge">if</code><span><span>語句</span><span>嵌入</span><span>到列表理解中-請查閱參考資料</span></span><span><span>以幫助您。</span><span>有許多例子和比我能提供的更好的解釋。</span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import random
+
+numlist = []
+list_length = random.randint(5,15)
+
+
+while len(numlist) &lt; list_length:
+    numlist.append(random.randint(1,75))
+    
+
+evenlist = [number for number in numlist if number % 2 == 0] 
+
+print(numlist)
+print(evenlist)</pre>
+<p></p><br />06 String Lists << <a href='06 String Lists.html'>Previous</a> <a href='08 Rock Paper Scissors.html'>Next</a> >> 08 Rock Paper Scissors</div>
         
     <!-- footer -->
       <div class="container">
